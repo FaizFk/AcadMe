@@ -249,16 +249,14 @@
     width: 50vw;
   }
 
-  .search
-  {
-    position:fixed;
-    top:10vh;
-    left:7vw;
+  .search {
+    position: fixed;
+    top: 11vh;
+    left: 7vw;
   }
 
-   .search button
-  {
-   width:15vw;
+  .search button {
+    width: 15vw;
   }
   .nav-logo {
     font-size: 30px;
@@ -270,10 +268,9 @@
     padding-left: 2vw;
   }
 
-  .popUp
-  {
-    transform: scale(0.6);
-    left:-25%;
-    top:25%;
-}
+  .popUp {
+    transform: scale(0.5);
+    left: -25%;
+    top: 25%;
+  }
 }
