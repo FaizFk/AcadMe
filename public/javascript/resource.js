@@ -4,6 +4,11 @@ const downvoteBtn = document.querySelector("#downvote-btn");
 const downvoteNum = document.querySelector("#downvotes-num");
 
 upvoteBtn.addEventListener("click", async () => {
+  if (!user) {
+    alert("You must be logged in to vote.");
+    return;
+  }
+
   const res = await fetch(`/resources/${resourceId}/upvote`);
   const data = await res.json();
 
@@ -30,6 +35,11 @@ upvoteBtn.addEventListener("click", async () => {
 });
 
 downvoteBtn.addEventListener("click", async () => {
+  if (!user) {
+    alert("You must be logged in to vote.");
+    return;
+  }
+
   const res = await fetch(`/resources/${resourceId}/downvote`);
 
   const data = await res.json();

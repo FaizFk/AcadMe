@@ -2,6 +2,10 @@ body {
   background-color: black;
 }
 
+.main {
+  margin-top: 12vh;
+}
+
 .votes {
   color: #929191;
 }
@@ -22,8 +26,7 @@ body {
   font-size: 1rem;
 }
 
-.dlink
-{
-  width:90vw;
+.dlink {
+  width: 90vw;
   overflow-wrap: break-word;
 }
