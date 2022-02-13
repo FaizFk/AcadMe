@@ -19,4 +19,6 @@ router
   .post(isLoggedIn, pagesController.addResourceToLibrary)
   .delete(isLoggedIn, pagesController.removeResourceFromLibrary);
 
+router.route("/about").get(pagesController.renderAboutPage);
+
 module.exports = router;

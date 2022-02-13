@@ -170,3 +170,9 @@ module.exports.updateProfile = async (req, res) => {
   req.flash("success", "Profile updated successfully");
   res.redirect("/profile");
 };
+
+module.exports.renderAboutPage = (_req, res) => {
+  res.render("pages/about", {
+    page: "about",
+  });
+};
