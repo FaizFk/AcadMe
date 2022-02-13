@@ -21,3 +21,9 @@ body {
 .comment-date {
   font-size: 1rem;
 }
+
+.dlink
+{
+  width:90vw;
+  overflow-wrap: break-word;
+}
