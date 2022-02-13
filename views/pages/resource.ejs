@@ -4,7 +4,7 @@
 
 <%- block("head").append("<link href='/css/resource.css' rel='stylesheet'>") -%>
 
-<div class="container mt-2 text-white">
+<div class="container main text-white">
   <div class="border-bottom">
     <h1>
       <%= resource.title %>
@@ -20,9 +20,9 @@
   <iframe src="<%= resource.embed %>" width="100%" height="500px"></iframe>
   <% } else { %>
   <h3 class="mt-2">Link</h3>
-  <div class = "dlink">
-  <a href="<%= resource.link %>" target="_none"><%= resource.link %></a>
-</div>
+  <div class="dlink">
+    <a href="<%= resource.link %>" target="_none"><%= resource.link %></a>
+  </div>
   <% } %>
   <div class="d-flex mt-2">
     <div class="me-2 upvotes">

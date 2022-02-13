@@ -1,5 +1,5 @@
-<nav class="navbar">
-  <a href="/" class="nav-logo">AcadMe</a>
+<nav class="my-navbar">
+  <a href="/" class="my-nav-logo">AcadMe</a>
   <% if (page === "home" || page === "library"){ %>
   <form action="<%= page === 'library' ? '/library': '/' %>" class="search">
     <input type="text" placeholder="Search" name="searchTerm" value="<%= searchTerm ? searchTerm: '' %>">
@@ -62,7 +62,7 @@
   <% if (user){ %>
   <div class="profile">
     <span><%= user.username %></span>
-    <div class="nav-profile-image">
+    <div class="my-nav-profile-image">
       <img src="<%= user.avatar.path %>" alt="profile-pic">
     </div>
     <i class="material-icons down">
@@ -70,7 +70,7 @@
     </i>
   </div>
   <% } else { %>
-  <ul class="nav-links">
+  <ul class="my-nav-links">
     <li>
       <a href="/auth/login">Login</a>
     </li>
@@ -84,4 +84,4 @@
   <a href="/profile">Profile</a>
   <a href="/help">Help</a>
   <a href="/auth/logout">Log out</a>
-</div>%
+</div>

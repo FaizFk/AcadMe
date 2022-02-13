@@ -144,7 +144,7 @@
 
 /* Navbar */
 
-.navbar {
+.my-navbar {
   color: white;
   position: fixed;
   top: 0;
@@ -157,14 +157,18 @@
   background-color: #312f2f;
 }
 
-.nav-logo {
+.my-nav-logo {
   color: white;
   text-decoration: none;
   font-size: 40px;
   margin-left: 1vw;
 }
 
-.nav-links {
+.my-nav-logo:hover {
+  color: white;
+}
+
+.my-nav-links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -173,7 +177,7 @@
   padding: 1rem;
 }
 
-.nav-links li {
+.my-nav-links li {
   list-style: none;
   margin-left: 1vw;
   font-size: 1.5rem;
@@ -181,7 +185,7 @@
   cursor: pointer;
 }
 
-.nav-links a {
+.my-nav-links a {
   margin: 0 0.5rem;
   text-decoration: none;
   color: white;
@@ -196,7 +200,7 @@
   justify-content: space-around;
 }
 
-.nav-profile-image {
+.my-nav-profile-image {
   width: 60px;
   height: 60px;
 }
@@ -209,7 +213,7 @@
   font-weight: bold;
 }
 
-.nav-profile-image img {
+.my-nav-profile-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -258,7 +262,8 @@
   .search button {
     width: 15vw;
   }
-  .nav-logo {
+
+  .my-nav-logo {
     font-size: 30px;
   }
 

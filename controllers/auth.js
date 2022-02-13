@@ -21,7 +21,7 @@ module.exports.registerUser = async (req, res, next) => {
     const registeredUser = await User.register(user, password);
     req.login(registeredUser, err => {
       if (err) return next(err);
-      req.flash("success", "Welcome to KSP-APP");
+      req.flash("success", "Welcome to AcadMe");
       res.redirect("/");
     });
   } catch (e) {
