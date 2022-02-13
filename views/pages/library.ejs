@@ -4,8 +4,8 @@
 <div class="container">
   <div class="sideMenu">
     <div class="icons">
-      <a class="material-icons" href="/">home</a>
-      <a class="material-icons" href="/library">video_library</a>
+      <a class="material-icons <%= page==='home' && 'active' %>" href="/">home</a>
+      <a class="material-icons <%= page==='library' && 'active' %>" href="/library">video_library</a>
     </div>
 
     <a class="add" href="/resources/new">
