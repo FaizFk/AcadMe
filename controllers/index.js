@@ -4,6 +4,7 @@ const { cloudinary } = require("../configs/cloudinaryConfig");
 
 module.exports.renderIndex = async (req, res) => {
   const search = req.query.searchTerm || "";
+  const searchTerm = search.replace(/[#-.]|[[-^]|[?|{}]/g, "\\$&");
   const sortBy = req.query.filter?.sort || "upvotes";
   let tags = req.query.filter?.tags || [
     "Computer Science",
@@ -30,10 +31,10 @@ module.exports.renderIndex = async (req, res) => {
       {
         $or: [
           {
-            title: new RegExp(`(\w*)${search}(\w*)`, "i"),
+            title: new RegExp(`(\w*)${searchTerm}(\w*)`, "i"),
           },
           {
-            authorName: new RegExp(`(\w*)${search}(\w*)`, "i"),
+            authorName: new RegExp(`(\w*)${searchTerm}(\w*)`, "i"),
           },
         ],
       },
@@ -56,6 +57,7 @@ module.exports.renderIndex = async (req, res) => {
 
 module.exports.renderLibraryPage = async (req, res) => {
   const search = req.query.searchTerm || "";
+  const searchTerm = search.replace(/[#-.]|[[-^]|[?|{}]/g, "\\$&");
   const sortBy = req.query.filter?.sort || "upvotes";
   let tags = req.query.filter?.tags || [
     "Computer Science",
@@ -85,10 +87,10 @@ module.exports.renderLibraryPage = async (req, res) => {
       {
         $or: [
           {
-            title: new RegExp(`(\w*)${search}(\w*)`, "i"),
+            title: new RegExp(`(\w*)${searchTerm}(\w*)`, "i"),
           },
           {
-            authorName: new RegExp(`(\w*)${search}(\w*)`, "i"),
+            authorName: new RegExp(`(\w*)${searchTerm}(\w*)`, "i"),
           },
         ],
       },

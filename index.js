@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const ejsMate = require("ejs-mate");
+const methodOverride = require("method-override");
 const { db } = require("./configs/dbConfig");
 const session = require("./configs/sessionConfig");
 const passport = require("./configs/passportConfig");
@@ -18,6 +19,7 @@ db.once("open", () => {
 });
 
 // Body-parsers and Static files
+app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
