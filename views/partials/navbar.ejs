@@ -38,6 +38,10 @@
               <%= filter.tags.includes("Literature") && 'checked' %>>
             <label>&nbspLiterature</label>
           </div>
+          <div>
+            <input type="checkbox" value="Other" name="filter[tags]" <%= filter.tags.includes("Other") && 'checked' %>>
+            <label>&nbspOther</label>
+          </div>
         </div>
         <div class="group">
           <div>
