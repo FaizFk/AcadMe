@@ -11,19 +11,19 @@ Our website makes sure to only include educational content and by default rank t
 
 
 ## Tech Stack Used in Project
-HTML  |  CSS  |  JavaScript | MongoDB | Cloudinary | NodeJs | ExpressJs   
+HTML  |  CSS  | EJS | JavaScript | MongoDB | NodeJs | ExpressJs   
 
 
 ## Links
 
  - [Live Website](https://acadme-222.herokuapp.com/)
  - [Presentation](https://www.canva.com/design/DAE4NCNLf08/PdoUwdNXQvW8SHPWNgXokA/view?utm_content=DAE4NCNLf08&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
- - [Video](https://www.youtube.com/watch?v=v_G3naQMx3M)
+ - [Video](https://www.youtube.com/watch?v=Cd-wwDiSqeg)
 
 
-## Local Setup
+## Local Setup for this project
 
-To setup this project locally-
+To setup this project locally -
 
 Create new file and name it .env with the variable
 ```bash
