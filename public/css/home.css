@@ -34,7 +34,7 @@ body {
 }
 
 .sideMenu .icons a.active {
-  background-color: rgb(255, 255, 255, 0.4);
+  color: #f1c40f;
 }
 
 .add {
@@ -218,6 +218,7 @@ body {
   }
 
   .icons {
+    flex: 1;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
