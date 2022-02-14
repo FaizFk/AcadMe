@@ -41,3 +41,16 @@ module.exports.logoutUser = (req, res) => {
   req.flash("success", "Successfully Logged Out");
   res.redirect("/auth/login");
 };
+
+module.exports.check = (req, res) => {
+  if (req.isAuthenticated()) {
+    return res.json({
+      isAuthenticated: true,
+      user: req.user
+    })
+  }
+  res.json({ 
+    isAuthenticated: false,
+    user: null
+  });
+}

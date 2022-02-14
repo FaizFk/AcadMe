@@ -167,6 +167,11 @@ module.exports.updateProfile = async (req, res) => {
 
   await user.save();
 
+  await Resource.updateMany(
+    { author: user._id },
+    { authorName: user.username }
+  );
+
   req.flash("success", "Profile updated successfully");
   res.redirect("/profile");
 };

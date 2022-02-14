@@ -39,6 +39,13 @@ app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 app.use("/resources", require("./routes/resources"));
 
+// Api Routes
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path}`);
+  next();
+})
+app.use("/api", require("./api/routes/resources"));
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
