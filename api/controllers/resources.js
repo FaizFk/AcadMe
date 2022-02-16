@@ -9,3 +9,15 @@ module.exports.getAll = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+module.exports.getLibrary = async (req, res) => {
+  try {
+    const resources = await Resource.find({
+      _id: { $in: req.user.library },
+    });
+
+    res.status(200).json(resources);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
