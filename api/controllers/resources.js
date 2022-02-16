@@ -1,0 +1,11 @@
+const Resource = require("../../models/resources");
+const Comment = require("../../models/comments");
+
+module.exports.getAll = async (req, res) => {
+  try {
+    const resources = await Resource.find({});
+    res.status(200).json(resources);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
