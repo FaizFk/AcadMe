@@ -1,17 +1,3 @@
-const User = require("../../models/users");
-const Resource = require("../../models/resources");
-
-module.exports.getProfile = async (req, res) => {
-  try {
-    const user = req.user;
-    const resources = await Resource.find({ author: user._id });
-
-    res.json({ resources });
-  } catch (e) {
-    res.status(500).json({ message: e.message });
-  }
-};
-
 module.exports.updateProfile = async (req, res) => {
   try {
     const user = req.user;

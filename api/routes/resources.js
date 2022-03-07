@@ -5,5 +5,6 @@ const { checkToken } = require("../../middlewares/isLoggedIn");
 
 router.route("/").get(resourcesController.getAll);
 router.route("/library").get(checkToken, resourcesController.getLibrary);
+router.route("/user").get(checkToken, resourcesController.getUserResources);
 
 module.exports = router;
